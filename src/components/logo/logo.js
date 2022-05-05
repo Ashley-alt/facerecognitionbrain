@@ -3,8 +3,8 @@ import './logo.css';
 
 const logo = () => {
     return (
-        <div className="ma4 mt0" id="brain">
-            <img src="https://i.pinimg.com/originals/6a/8f/8f/6a8f8f9f5f34560405de991efefd6e82.png" alt="brain logo" width ="300" height ="200" />
+        <div style={{paddingBottom: '100px'}}className="ma4 mt0" id="brain">
+            <img  className ='br2 shadow-2' src="https://pngimg.com/uploads/brain/brain_PNG99.png" alt="brain logo" width ="200" height ="100" />
         </div>
     )
 }
