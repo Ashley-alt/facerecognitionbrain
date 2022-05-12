@@ -6,6 +6,7 @@ import Rank from './components/rank/rank';
 import './App.css';
 import 'tachyons'; 
 
+
 class App extends Component {
   render() {
     return (
