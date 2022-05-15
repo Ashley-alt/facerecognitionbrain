@@ -25,7 +25,7 @@ import 'tachyons';
           resize: true
         },
         modes: {
-          push: { quantity: 4 },
+          push: { quantity: 10 },
           attract: { distance: 200, duration: 0.4, factor: 5 }
         }
       },
@@ -48,7 +48,7 @@ import 'tachyons';
           speed: 2,
           straight: false
         },
-        number: { density: { enable: true, value_area: 800 }, value: 80 },
+        number: { density: { enable: true, value_area: 800 }, value: 100 },
         opacity: {
           anim: { enable: false, opacity_min: 0.1, speed: 1, sync: false },
           random: false,
@@ -90,11 +90,22 @@ import 'tachyons';
   })(); // this must be done after loadFull
 
 
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
-
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      input: "",
+    }
+  }
+
+  onInputChange = (event) => {
+    console.log(event.target.event);
+  }
+
+  onButtonSubmit = () => {
+    console.log('click');
+  }
+
   render() {
     return (
       <div className="App">
@@ -102,7 +113,9 @@ class App extends Component {
         <Navigation />
         <Logo />
         <Rank />
-        <ImageLinkForm />
+        <ImageLinkForm 
+        onInputChange={this.onInputChange} 
+        onButtonSubmit={this.onButtonSubmit}/>
         {/*<FaceRecognition></FaceRecognition>*/}
       </div>
     );
